@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Alertify con Bootstrap</title>
+
+    <!-- Agrega la hoja de estilo de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Agrega la hoja de estilo de Alertify -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/themes/default.min.css" />
+
+    <!-- Agrega jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Agrega Alertify -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/alertify.min.js"></script>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1>Ejemplo de Alertify con Bootstrap</h1>
+
+        <!-- Agrega botones de Bootstrap -->
+        <button class="btn btn-primary mr-2" onclick="mostrarAlerta()">Mostrar Alerta</button>
+        <button class="btn btn-danger" onclick="mostrarConfirmacion()">Mostrar Confirmación</button>
+    </div>
+
+    <script>
+        function mostrarAlerta() {
+            // Utiliza Alertify para mostrar una alerta
+            alertify.alert('¡Hola!', 'Este es un mensaje de Alertify.');
+        }
+
+        function mostrarConfirmacion() {
+            
+            alertify.confirm('¿Estás seguro?', 'Esta acción no se puede deshacer.',
+                function () {
+                    // Acción confirmada
+                    alertify.success('Acción confirmada');
+                },
+                function () {
+                    // Acción cancelada
+                    alertify.error('Acción cancelada');
+                });
+        }
+    </script>
+
+</body>
+</html>

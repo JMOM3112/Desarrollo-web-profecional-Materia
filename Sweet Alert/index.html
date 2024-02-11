@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de SweetAlert2 con Bootstrap</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+
+ 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1>Ejemplo de SweetAlert2 con Bootstrap</h1>
+
+   
+        <button class="btn btn-primary" onclick="mostrarSweetAlert()">Mostrar SweetAlert2</button>
+    </div>
+
+    <script>
+        function mostrarSweetAlert() {
+    
+            Swal.fire({
+                title: '¡Hola!',
+                text: 'Talent Land 2024',
+                icon: 'success',
+                confirmButtonText: '¡Entendido!'
+            });
+        }
+    </script>
+
+</body>
+</html>
